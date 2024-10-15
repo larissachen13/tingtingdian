@@ -1,0 +1,19 @@
+<div class="header"> 
+    <div class="title"> Ting Ting Dian </div>
+    <img class ="header-icon" src="/assets/whisk-icon.png" alt="logo" aria-hidden="true">
+    <img class="header-icon" src="/assets/bread-icon.png" alt="logo" aria-hidden="true">
+</div>  
+<c-carousel [interval]="0">
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let slide of slides">
+        <img
+          [src]="slide.src"
+          alt="{{slide.title}}"
+          class="carousel-image"
+          loading="lazy"
+        />
+      </c-carousel-item>
+    </c-carousel-inner>
+    <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+    <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+  </c-carousel>
